@@ -7,7 +7,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Scrolling Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Hover Effects */
+a:hover {
+  opacity: 0.8;
+}
+
+button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
