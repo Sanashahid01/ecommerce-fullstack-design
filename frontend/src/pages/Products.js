@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { db } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
@@ -7,6 +7,9 @@ function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const searchQuery = searchParams.get('search') || '';
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -28,9 +31,13 @@ function Products() {
 
   const categories = ['All', ...new Set(products.map(p => p.category))];
 
-  const filteredProducts = selectedCategory === 'All' 
-    ? products 
-    : products.filter(p => p.category === selectedCategory);
+  const filteredProducts = products.filter(product => {
+    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
+    const matchesSearch = !searchQuery || 
+      product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.category.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   if (loading) return <div style={styles.loading}>Loading products...</div>;
 
@@ -38,7 +45,8 @@ function Products() {
     <div style={styles.container}>
       <div style={styles.header}>
         <h1 style={styles.title}>🛍️ VENDOORA Products</h1>
-        <p style={styles.subtitle}>Dynamic data from Firebase | Free Delivery over Rs. 2000</p>
+        {searchQuery && <p style={styles.subtitle}>Search results for: "{searchQuery}"</p>}
+        {!searchQuery && <p style={styles.subtitle}>Dynamic data from Firebase | Free Delivery over Rs. 2000</p>}
       </div>
 
       <div style={styles.filterContainer}>
