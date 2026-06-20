@@ -166,9 +166,9 @@ function Home() {
 }
 
 const styles = {
-  announcementBar: {
-    backgroundColor: '#7B1FA2',
-    color: 'white',
+ announcementBar: {
+    backgroundColor: '#FFCCBC',
+    color: '#1A1A2E',
     padding: '8px 0',
     overflow: 'hidden',
     whiteSpace: 'nowrap',
