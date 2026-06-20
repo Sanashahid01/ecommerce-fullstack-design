@@ -13,15 +13,15 @@ function ProductDetail() {
 
     // Jewelry
     { id: 5, name: 'Gold Plated Earrings', price: 899, originalPrice: 1499, rating: 4.8, reviews: 567, stock: 28, category: 'Jewelry', description: 'Elegant gold-plated earrings with intricate design. Perfect for weddings and special occasions. Anti-tarnish coating.', image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=400&fit=crop' },
-    { id: 6, name: 'Silver Bracelet Set', price: 1299, originalPrice: 2199, rating: 4.6, reviews: 432, stock: 34, category: 'Jewelry', description: 'Set of 3 sterling silver bracelets. Adjustable size, hypoallergenic. Perfect for daily wear and gifting.', image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220e?w=600&h=400&fit=crop' },
+    { id: 6, name: 'Silver Bracelet Set', price: 1299, originalPrice: 2199, rating: 4.6, reviews: 432, stock: 34, category: 'Jewelry', description: 'Set of 3 sterling silver bracelets. Adjustable size, hypoallergenic. Perfect for daily wear and gifting.', image: 'https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
     { id: 7, name: 'Artificial Necklace', price: 699, originalPrice: 1199, rating: 4.5, reviews: 123, stock: 56, category: 'Jewelry', description: 'Stunning artificial necklace with matching earrings. Kundan style design. Perfect for traditional Pakistani outfits.', image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=400&fit=crop' },
     { id: 8, name: 'Bridal Jewelry Set', price: 3499, originalPrice: 5999, rating: 4.9, reviews: 89, stock: 8, category: 'Jewelry', description: 'Complete bridal jewelry set including necklace, earrings, maang tikka and bangles. Premium quality with gold plating.', image: 'https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=600&h=400&fit=crop' },
 
     // Women Fashion
-    { id: 9, name: 'Ladies Cardigan', price: 1599, originalPrice: 2499, rating: 4.5, reviews: 234, stock: 42, category: 'Women Fashion', description: 'Soft knit cardigan with button closure. Available in multiple colors. Perfect for winter and AC environments.', image: 'https://images.unsplash.com/photo-1434389677669-e08b4dba3a65?w=600&h=400&fit=crop' },
+    { id: 9, name: 'Ladies Cardigan', price: 1599, originalPrice: 2499, rating: 4.5, reviews: 234, stock: 42, category: 'Women Fashion', description: 'Soft knit cardigan with button closure. Available in multiple colors. Perfect for winter and AC environments.', image: 'https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
     { id: 10, name: 'Printed Kurti', price: 1299, originalPrice: 1999, rating: 4.6, reviews: 567, stock: 38, category: 'Women Fashion', description: 'Cotton printed kurti with traditional Pakistani designs. Comfortable for daily wear. Machine washable.', image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&h=400&fit=crop' },
     { id: 11, name: 'Women Jeans', price: 1899, originalPrice: 2999, rating: 4.4, reviews: 189, stock: 45, category: 'Women Fashion', description: 'High-waisted skinny jeans with stretch fabric. Comfortable fit, durable denim. Available in multiple sizes.', image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&h=400&fit=crop' },
-    { id: 12, name: 'Ladies Jacket', price: 2499, originalPrice: 3999, rating: 4.7, reviews: 432, stock: 22, category: 'Women Fashion', description: 'Stylish bomber jacket with quilted lining. Wind-resistant, warm and fashionable. Perfect for winter season.', image: 'https://images.unsplash.com/photo-1551488852-0801751ac367?w=600&h=400&fit=crop' },
+    { id: 12, name: 'Ladies Jacket', price: 2499, originalPrice: 3999, rating: 4.7, reviews: 432, stock: 22, category: 'Women Fashion', description: 'Stylish bomber jacket with quilted lining. Wind-resistant, warm and fashionable. Perfect for winter season.', image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
 
     // Men Fashion
     { id: 13, name: 'Men Casual Shirt', price: 1199, originalPrice: 1899, rating: 4.5, reviews: 342, stock: 54, category: 'Men Fashion', description: '100% cotton casual shirt with modern fit. Breathable fabric, perfect for Pakistani weather. Easy iron.', image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&h=400&fit=crop' },
@@ -31,7 +31,7 @@ function ProductDetail() {
 
     // Home & Kitchen
     { id: 17, name: 'Kitchen Storage Set', price: 1599, originalPrice: 2499, rating: 4.7, reviews: 432, stock: 29, category: 'Home & Kitchen', description: 'Set of 6 airtight storage containers. BPA-free plastic, stackable design. Keep food fresh longer.', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop' },
-    { id: 18, name: 'Non-Stick Cookware', price: 3499, originalPrice: 5499, rating: 4.8, reviews: 234, stock: 15, category: 'Home & Kitchen', description: '5-piece non-stick cookware set. Includes kadai, tawa, and pans. Induction compatible, easy to clean.', image: 'https://images.unsplash.com/photo-1556911220-e15b30be8a8d?w=600&h=400&fit=crop' },
+    { id: 18, name: 'Non-Stick Cookware', price: 3499, originalPrice: 5499, rating: 4.8, reviews: 234, stock: 15, category: 'Home & Kitchen', description: '5-piece non-stick cookware set. Includes kadai, tawa, and pans. Induction compatible, easy to clean.', image: 'https://images.pexels.com/photos/2281546/pexels-photo-2281546.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
     { id: 19, name: 'Bedsheet Set', price: 1299, originalPrice: 1999, rating: 4.5, reviews: 567, stock: 38, category: 'Home & Kitchen', description: 'King-size bedsheet set with 2 pillow covers. 100% cotton, floral prints. Soft and comfortable for all seasons.', image: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&h=400&fit=crop' },
     { id: 20, name: 'LED Table Lamp', price: 899, originalPrice: 1499, rating: 4.6, reviews: 189, stock: 47, category: 'Home & Kitchen', description: 'Adjustable LED table lamp with 3 color modes. USB charging, touch control. Perfect for study and work.', image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&h=400&fit=crop' },
 
@@ -58,7 +58,7 @@ function ProductDetail() {
 
       <div style={styles.productLayout}>
         <div style={styles.imageSection}>
-          <img src={product.image} alt={product.name} style={styles.mainImage} />
+          <img src={product.image} alt={product.name} style={styles.mainImage} onError={(e) => {e.target.src = 'https://placehold.co/600x400/7B1FA2/FFFFFF?text=' + encodeURIComponent(product.name)}} />
         </div>
 
         <div style={styles.detailsSection}>

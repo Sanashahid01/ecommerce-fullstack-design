@@ -13,15 +13,15 @@ function Products() {
 
     // Jewelry (4 products)
     { id: 5, name: 'Gold Plated Earrings', price: 899, originalPrice: 1499, rating: 4.8, reviews: 567, category: 'Jewelry', image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=300&fit=crop' },
-    { id: 6, name: 'Silver Bracelet Set', price: 1299, originalPrice: 2199, rating: 4.6, reviews: 432, category: 'Jewelry', image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220e?w=400&h=300&fit=crop' },
+    { id: 6, name: 'Silver Bracelet Set', price: 1299, originalPrice: 2199, rating: 4.6, reviews: 432, category: 'Jewelry', image: 'https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop' },
     { id: 7, name: 'Artificial Necklace', price: 699, originalPrice: 1199, rating: 4.5, reviews: 123, category: 'Jewelry', image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=300&fit=crop' },
     { id: 8, name: 'Bridal Jewelry Set', price: 3499, originalPrice: 5999, rating: 4.9, reviews: 89, category: 'Jewelry', image: 'https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=400&h=300&fit=crop' },
 
     // Women Fashion (4 products)
-    { id: 9, name: 'Ladies Cardigan', price: 1599, originalPrice: 2499, rating: 4.5, reviews: 234, category: 'Women Fashion', image: 'https://images.unsplash.com/photo-1434389677669-e08b4dba3a65?w=400&h=300&fit=crop' },
+    { id: 9, name: 'Ladies Cardigan', price: 1599, originalPrice: 2499, rating: 4.5, reviews: 234, category: 'Women Fashion', image: 'https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop' },
     { id: 10, name: 'Printed Kurti', price: 1299, originalPrice: 1999, rating: 4.6, reviews: 567, category: 'Women Fashion', image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=300&fit=crop' },
     { id: 11, name: 'Women Jeans', price: 1899, originalPrice: 2999, rating: 4.4, reviews: 189, category: 'Women Fashion', image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=300&fit=crop' },
-    { id: 12, name: 'Ladies Jacket', price: 2499, originalPrice: 3999, rating: 4.7, reviews: 432, category: 'Women Fashion', image: 'https://images.unsplash.com/photo-1551488852-0801751ac367?w=400&h=300&fit=crop' },
+    { id: 12, name: 'Ladies Jacket', price: 2499, originalPrice: 3999, rating: 4.7, reviews: 432, category: 'Women Fashion', image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop' },
 
     // Men Fashion (4 products)
     { id: 13, name: 'Men Casual Shirt', price: 1199, originalPrice: 1899, rating: 4.5, reviews: 342, category: 'Men Fashion', image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=300&fit=crop' },
@@ -31,7 +31,7 @@ function Products() {
 
     // Home & Kitchen (4 products)
     { id: 17, name: 'Kitchen Storage Set', price: 1599, originalPrice: 2499, rating: 4.7, reviews: 432, category: 'Home & Kitchen', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop' },
-    { id: 18, name: 'Non-Stick Cookware', price: 3499, originalPrice: 5499, rating: 4.8, reviews: 234, category: 'Home & Kitchen', image: 'https://images.unsplash.com/photo-1556911220-e15b30be8a8d?w=400&h=300&fit=crop' },
+    { id: 18, name: 'Non-Stick Cookware', price: 3499, originalPrice: 5499, rating: 4.8, reviews: 234, category: 'Home & Kitchen', image: 'https://images.pexels.com/photos/2281546/pexels-photo-2281546.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop' },
     { id: 19, name: 'Bedsheet Set', price: 1299, originalPrice: 1999, rating: 4.5, reviews: 567, category: 'Home & Kitchen', image: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=400&h=300&fit=crop' },
     { id: 20, name: 'LED Table Lamp', price: 899, originalPrice: 1499, rating: 4.6, reviews: 189, category: 'Home & Kitchen', image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&h=300&fit=crop' },
 
@@ -55,7 +55,6 @@ function Products() {
         <p style={styles.subtitle}>24+ categories | Free Delivery over Rs. 2000 | Cash on Delivery</p>
       </div>
 
-      {/* Category Filter */}
       <div style={styles.filterContainer}>
         {categories.map(cat => (
           <button
@@ -73,14 +72,18 @@ function Products() {
         ))}
       </div>
 
-      {/* Products Grid */}
       <div style={styles.grid}>
         {filteredProducts.map(product => (
           <div key={product.id} style={styles.card}>
             <div style={styles.discountBadge}>
               -{Math.round((1 - product.price/product.originalPrice) * 100)}%
             </div>
-            <img src={product.image} alt={product.name} style={styles.image} />
+            <img 
+              src={product.image} 
+              alt={product.name} 
+              style={styles.image} 
+              onError={(e) => {e.target.src = 'https://placehold.co/400x300/7B1FA2/FFFFFF?text=' + encodeURIComponent(product.name)}}
+            />
             <div style={styles.info}>
               <span style={styles.category}>{product.category}</span>
               <h3 style={styles.name}>{product.name}</h3>
@@ -164,6 +167,7 @@ const styles = {
     width: '100%',
     height: '220px',
     objectFit: 'cover',
+    backgroundColor: '#f0f0f0',
   },
   info: {
     padding: '15px',

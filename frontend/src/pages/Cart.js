@@ -27,7 +27,7 @@ function Cart() {
           <div style={styles.itemsSection}>
             {cartItems.map(item => (
               <div key={item.id} style={styles.cartItem}>
-                <img src={item.image} alt={item.name} style={styles.itemImage} />
+                <img src={item.image} alt={item.name} style={styles.itemImage} onError={(e) => {e.target.src = 'https://placehold.co/100x100/7B1FA2/FFFFFF?text=' + encodeURIComponent(item.name)}} />
                 <div style={styles.itemDetails}>
                   <h3 style={styles.itemName}>{item.name}</h3>
                   <p style={styles.itemPrice}>Rs. {item.price.toLocaleString()}</p>
